@@ -35,6 +35,8 @@ nav {
   grid-template-columns: 1fr 1fr;
   margin: 40px auto;
   justify-content: space-between;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 nav a {
@@ -53,4 +55,24 @@ footer p {
   text-align: center;
   color: whitesmoke;
   margin: 40px auto;
+}
+
+.singleProject {
+  text-align: center;
+  margin: 5%;
+  padding-top: 2%;
+  width: 40%;
+  border: solid white 1px;
+  border-radius: 10px;
+}
+
+.projectImg {
+  width: 60%;
+  padding-bottom: 10px;
+}
+
+.stack {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: -10%;
 }

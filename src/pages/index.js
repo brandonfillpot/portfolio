@@ -15,6 +15,11 @@ export default function Home() {
             See My Portfolio
           </Link>
         </div>
+        <img
+          src="/earthbackground.png"
+          alt="site banner"
+          className={styles.img}
+        />
       </section>
     </Layout>
   )
