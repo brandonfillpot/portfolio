@@ -57,13 +57,22 @@ footer p {
   margin: 40px auto;
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .singleProject {
   text-align: center;
-  margin: 5%;
+  margin: 3%;
   padding-top: 2%;
-  width: 40%;
+  width: 450px;
   border: solid white 1px;
   border-radius: 10px;
+}
+.singleViewProject {
+  text-align: center;
 }
 
 .projectImg {
@@ -75,4 +84,38 @@ footer p {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: -10%;
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(13, 190, 122);
+  padding: 10px 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-right: 1.5%;
+  margin-left: 1.5%;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.description {
+  width: 60%;
+}
+
+h4 {
+  margin-top: 2%;
+}
+
+.contact {
+  margin: 5%;
+}
+
+.info {
+  margin-left: 5%;
 }

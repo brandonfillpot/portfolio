@@ -4,20 +4,31 @@ import Layout from "../../components/Layout"
 import * as styles from "../../styles/projects.module.css"
 
 export default function Projects({ data }) {
-  const { title, stack, description } = data.site.siteMetadata.bookshelf
+  console.log("data:", data)
+  const metaData = data.site.siteMetadata
+  console.log("metadata:", metaData)
   return (
     <Layout>
       <div className={styles.portfolio}>
         <h2>Portfolio</h2>
         <h3>Projects & Websites I've Created</h3>
       </div>
-      <Link to="/bookshelf">
+      <div className="projects">
         <div className="singleProject">
-          <img src="/bookshelf.jpeg" className="projectImg" />
-          <h3>{title}</h3>
-          <p className="stack">{stack}</p>
+          <Link to="/projects/bookshelf">
+            <img src="/bookshelf.jpeg" className="projectImg" />
+            <h3>{metaData.bookshelf.title}</h3>
+            <p className="stack">{metaData.bookshelf.stack}</p>
+          </Link>
         </div>
-      </Link>
+        <div className="singleProject">
+          <Link to="/projects/facial_recognition">
+            <img src="/faceRecog.jpeg" className="projectImg" />
+            <h3>{metaData.faceRecognition.title}</h3>
+            <p className="stack">{metaData.faceRecognition.stack}</p>
+          </Link>
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -28,9 +39,13 @@ export const query = graphql`
       siteMetadata {
         bookshelf {
           title
-          stack
           description
-          imgUrl
+          stack
+        }
+        faceRecognition {
+          title
+          description
+          stack
         }
       }
     }
